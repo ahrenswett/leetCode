@@ -5,7 +5,13 @@ public class ReverseInt {
     public int reverse(int x) {
 //        make a new int to hold the reverse of the input
         int rev = 0;
-        while(x > 0){
+        while(x != 0){
+//            see readme to understand blow stack precaution logic.
+                if( rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE/10 && x%10 > 7))return 0;
+                if( rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE/10 && x%10 < -7))return 0;
+                rev = (rev*10) + (x%10);
+                x = x/10;
+
 //         example: while input > 0
 //              input = 546;  rev = 0
 //              rev = (rev*10=0) + (input%10=6); rev=6
@@ -16,12 +22,7 @@ public class ReverseInt {
 //              input = input/10; input = 5
 
 //              input = 5 ; rev = 64
-
-            rev = (rev*10) + (x%10);
-            x = x/10;
-        }
-        if(x > Math.pow(2,31)-1){
-            return 0;
+//            the problem is that if rev
         }
         return rev;
     }
