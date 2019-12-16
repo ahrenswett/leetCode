@@ -6,9 +6,11 @@ public class ReverseInt {
 //        make a new int to hold the reverse of the input
         int rev = 0;
         while(x != 0){
-//            see readme to understand blow stack precaution logic.
+//            when rev > maxvalue/10 it is greater than 214748364.7
                 if( rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE/10 && x%10 > 7))return 0;
+//            when rev < minvalue/10 it is less than -214748364.7
                 if( rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE/10 && x%10 < -7))return 0;
+
                 rev = (rev*10) + (x%10);
                 x = x/10;
 
