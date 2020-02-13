@@ -9,7 +9,7 @@ public class TicketPath {
 //    No use of helper functions
     public static String ticketPathDecoderV2(Stack<Ticket> stackOfTickets){
         flights2 = new HashMap<>();
-        ArrayList<String> arrivals  = new ArrayList<>();
+        List<String> arrivals  = new ArrayList<>();
 
         for(int i = stackOfTickets.size(); i > 0 ; i--){
             Ticket ttp = stackOfTickets.pop();
@@ -19,13 +19,17 @@ public class TicketPath {
 //        get all the flight departures and compare to the arrivals
         for(String city : flights2.keySet()) {
 //            if arrivals does not contain the departure city it must be the origin
-            if(!arrivals.contains(city)){
+                if(!arrivals.contains(city)){
 //                found the start city, return the path
                 StringBuilder flightPath = new StringBuilder();
                 flightPath.append(city);
 //                loop through getting the city's value, appending it, and setting it as city
                 while( (city = flights2.get(city)) !=null ){
                     flightPath.append(", "+city);
+                }
+                String[] allCities = flightPath.toString().split(", ");
+                for(int i = 0; i < allCities.length; i++){
+                    System.out.println(allCities[i]);
                 }
                 return flightPath.toString();
             }
