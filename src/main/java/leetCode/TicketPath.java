@@ -4,7 +4,7 @@ import java.util.*;
 
 public class TicketPath {
     private static HashMap<String, LinkedHashSet<String>> flights;
-    
+
     public static String ticketPathDecoder(Stack<Ticket> stackOfTickets){
         flights = new HashMap<>();
 //        deque the stack into a hashmap using the departure as key.
@@ -20,35 +20,51 @@ public class TicketPath {
         }
 
 //        go through all the keys
-            for (String city : flights.keySet()) {
+        for (String city : flights.keySet()) {
 //                get the hashset of where I can go from the current city
-                LinkedHashSet<String> allArrivals = flights.get(city);
-//                
+            LinkedHashSet<String> allArrivals = flights.get(city);
+//            store the last place in the keys value HS
+            String lastArrived = getLastElement(allArrivals);
+
+            while (flights.get(lastArrived) != null &&
+                    allArrivals.addAll(flights.get(lastArrived))){
+                lastArrived = getLastElement(allArrivals);
+            }
+            if (allArrivals.size() == flights.size()){
+                return buildString(city, allArrivals);
+            }
+//
 //                go through each city in the arrivals
-                for (String cityArrived : allArrivals) {
-//                    see if it was departed from, i.e. is it a key in the hashmap
-                    if (flights.get(cityArrived) != null) {
-//                        if it is add its list of where I can go from the current arrival city
-                        if (allArrivals.addAll(flights.get(cityArrived))) {
-//                            if any cities were added to the list get the last one and add its list of where I can go from there.
-                            while (flights.get(getLastElement(allArrivals)) != null && allArrivals.addAll(flights.get(getLastElement(allArrivals)))) {
-                                }
-//                            if nothing is added check if the list is the same size as 
-                            if (flights.get(city).size() == flights.size()) {
-                                System.out.println("succccccesss start city is " + city);
-                                System.out.println("Flight Path is: "+buildString(city, allArrivals));
-                                return buildString(city, allArrivals);
-                            }
-                        }
-                    }
-                }
-//          }
+//            for (String cityArrivedAt:)
+
+
+
+
+
+
+//            for (String cityArrived : allArrivals) {
+////                    see if it was departed from, i.e. is it a key in the hashmap
+//                if (flights.get(cityArrived) != null) {
+////                        if it is add its list of where I can go from the current arrival city
+//                    if (allArrivals.addAll(flights.get(cityArrived))) {
+////                            if any cities were added to the list get the last one and add its list of where I can go from there.
+//                        while (flights.get(getLastElement(allArrivals)) != null && allArrivals.addAll(flights.get(getLastElement(allArrivals)))) {
+//                        }
+////                            if nothing is added check if the list is the same size as
+//                        if (flights.get(city).size() == flights.size()) {
+//                            System.out.println("succccccesss start city is " + city);
+//                            System.out.println("Flight Path is: "+buildString(city, allArrivals));
+//                            return buildString(city, allArrivals);
+//                        }
+//                    }
+//                }
+//            }
         }
         return "No valid path";
     }
 
 
-//    https://stackoverflow.com/questions/8360785/java-get-last-element-of-a-collection
+    //    https://stackoverflow.com/questions/8360785/java-get-last-element-of-a-collection
     public static <T> T getLastElement(final Iterable<T> elements) {
         T lastElement = null;
 
