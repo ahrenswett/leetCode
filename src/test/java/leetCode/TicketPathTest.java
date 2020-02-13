@@ -39,13 +39,40 @@ public class TicketPathTest {
         assertEquals("van, ont, ind, sea, la, sl, el, dc, or, pr, vn, mars",TicketPath.ticketPathDecoder(stack));
     }
     @Test
-    public void ticketPathDecoder2() {
+    public void ticketPathDecoderV2() {
         stack = new Stack<>();
         stack.push(t1);
         stack.push(t2);
         stack.push(t3);
         stack.push(t4);
         stack.push(t10);
-        assertEquals("sea, la, sl, el, dc, or",TicketPath.ticketPathDecoder(stack));
+        assertEquals("sea, la, sl, el, dc, or",TicketPath.ticketPathDecoderV2(stack));
+    }
+
+    @Test
+    public void ticketPathDecoderV2Test1() {
+        stack = new Stack<>();
+        stack.push(t1);
+        stack.push(t2);
+        stack.push(t3);
+        stack.push(t4);
+        stack.push(t5);
+        stack.push(t6);
+        stack.push(t7);
+        stack.push(t8);
+        stack.push(t9);
+        stack.push(t10);
+        stack.push(t11);
+        assertEquals("van, ont, ind, sea, la, sl, el, dc, or, pr, vn, mars",TicketPath.ticketPathDecoderV2(stack));
+    }
+    @Test
+    public void ticketPathDecoderV2Test2() {
+        stack = new Stack<>();
+        stack.push(t1);
+        stack.push(t2);
+        stack.push(t3);
+        stack.push(t4);
+        stack.push(t10);
+        assertEquals("sea, la, sl, el, dc, or",TicketPath.ticketPathDecoderV2(stack));
     }
 }

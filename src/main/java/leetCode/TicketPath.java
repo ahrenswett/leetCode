@@ -4,7 +4,37 @@ import java.util.*;
 
 public class TicketPath {
     private static HashMap<String, LinkedHashSet<String>> flights;
+    private static HashMap<String, String> flights2;
 
+//    No use of helper functions
+    public static String ticketPathDecoderV2(Stack<Ticket> stackOfTickets){
+        flights2 = new HashMap<>();
+        ArrayList<String> arrivals  = new ArrayList<>();
+
+        for(int i = stackOfTickets.size(); i > 0 ; i--){
+            Ticket ttp = stackOfTickets.pop();
+            arrivals.add(ttp.arrive);
+            flights2.put(ttp.depart,ttp.arrive);
+        }
+//        get all the flight departures and compare to the arrivals
+        for(String city : flights2.keySet()) {
+//            if arrivals does not contain the departure city it must be the origin
+            if(!arrivals.contains(city)){
+//                found the start city, return the path
+                StringBuilder flightPath = new StringBuilder();
+                flightPath.append(city);
+//                loop through getting the city's value, appending it, and setting it as city
+                while( (city = flights2.get(city)) !=null ){
+                    flightPath.append(", "+city);
+                }
+                return flightPath.toString();
+            }
+        }
+        return "No Clear Flight Path";
+    }
+
+
+//    this one utilizes hashmaps and helper functions
     public static String ticketPathDecoder(Stack<Ticket> stackOfTickets){
         flights = new HashMap<>();
 //        deque the stack into a hashmap using the departure as key.
@@ -18,7 +48,6 @@ public class TicketPath {
 //            then add the tickets depart as key and the new arrivals LHS as value to flights HM
             flights.put(ttp.depart,arrivals);
         }
-
 //        go through all the keys
         for (String city : flights.keySet()) {
 //                get the hashset of where I can go from the current city
@@ -33,45 +62,22 @@ public class TicketPath {
             if (allArrivals.size() == flights.size()){
                 return buildString(city, allArrivals);
             }
-//
-//                go through each city in the arrivals
-//            for (String cityArrivedAt:)
-
-
-
-
-
-
-//            for (String cityArrived : allArrivals) {
-////                    see if it was departed from, i.e. is it a key in the hashmap
-//                if (flights.get(cityArrived) != null) {
-////                        if it is add its list of where I can go from the current arrival city
-//                    if (allArrivals.addAll(flights.get(cityArrived))) {
-////                            if any cities were added to the list get the last one and add its list of where I can go from there.
-//                        while (flights.get(getLastElement(allArrivals)) != null && allArrivals.addAll(flights.get(getLastElement(allArrivals)))) {
-//                        }
-////                            if nothing is added check if the list is the same size as
-//                        if (flights.get(city).size() == flights.size()) {
-//                            System.out.println("succccccesss start city is " + city);
-//                            System.out.println("Flight Path is: "+buildString(city, allArrivals));
-//                            return buildString(city, allArrivals);
-//                        }
-//                    }
-//                }
-//            }
         }
         return "No valid path";
     }
 
 
+
+
+
+
+
     //    https://stackoverflow.com/questions/8360785/java-get-last-element-of-a-collection
     public static <T> T getLastElement(final Iterable<T> elements) {
         T lastElement = null;
-
         for (T element : elements) {
             lastElement = element;
         }
-
         return lastElement;
     }
 

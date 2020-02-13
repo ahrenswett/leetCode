@@ -4,6 +4,7 @@
     <list default="true" id="95501e2e-5591-4bfe-9642-355d82ec1a41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/leetCode/TicketPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/leetCode/TicketPathTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,45 +72,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.TicketPathTest.ticketPathDecoder1">
-    <configuration name="GoatLatin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leetCode.GoatLatin" />
-      <module name="leetCode.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetCode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TicketPathTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TicketPathTest.ticketPathDecoder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest.ticketPathDecoder&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -134,12 +112,52 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TicketPathTest.ticketPathDecoder2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TicketPathTest.ticketPathDecoderV2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest.ticketPathDecoder2&quot;" />
+        <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest.ticketPathDecoderV2&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TicketPathTest.ticketPathDecoderV2Test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest.ticketPathDecoderV2Test1&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TicketPathTest.ticketPathDecoderV2Test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;leetCode.TicketPathTest.ticketPathDecoderV2Test2&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -157,10 +175,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.TicketPathTest.ticketPathDecoder1" />
+        <item itemvalue="Gradle.TicketPathTest.ticketPathDecoderV2Test1" />
+        <item itemvalue="Gradle.TicketPathTest.ticketPathDecoderV2Test2" />
         <item itemvalue="Gradle.TicketPathTest" />
-        <item itemvalue="Gradle.TicketPathTest.ticketPathDecoder2" />
-        <item itemvalue="Gradle.TicketPathTest.ticketPathDecoder" />
-        <item itemvalue="Application.GoatLatin" />
+        <item itemvalue="Gradle.TicketPathTest.ticketPathDecoderV2" />
       </list>
     </recent_temporary>
   </component>
@@ -200,42 +218,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/leetCode/TicketPath.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="72" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/leetCode$FBVTest_testfirstBadVersion.ic" NAME="FBVTest.testfirstBadVersion Coverage Results" MODIFIED="1576522404576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
