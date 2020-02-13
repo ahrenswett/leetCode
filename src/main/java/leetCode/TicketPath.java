@@ -9,7 +9,7 @@ public class TicketPath {
 //    No use of helper functions
     public static String ticketPathDecoderV2(Stack<Ticket> stackOfTickets){
         flights2 = new HashMap<>();
-        ArrayList<String> arrivals  = new ArrayList<>();
+        List<String> arrivals  = new ArrayList<>();
 
         for(int i = stackOfTickets.size(); i > 0 ; i--){
             Ticket ttp = stackOfTickets.pop();
